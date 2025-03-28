@@ -20,7 +20,6 @@ fetch("produits.json")
   .catch(function(error) {
     console.error("Erreur : ", error);
   });
-
 // ------------------------ HOME PAGE ------------------------ //
 //
 //--- INITIALISATION DU TABLEAU
@@ -52,6 +51,11 @@ function Affichage() {
       //--- CREATION LIGNE TABLEAU
       let ligne = document.createElement("tr");
       ligne.classList.add("data");
+
+      //--- IMG PRODUIT
+      let imgProduitline = document.createElement("td");
+      let imgBalise = document.createElement("img");
+      imgBalise.src = "./imagesProduits/" + produit.photo;
 
       //--- CELULLE REFERENCE
       let celluleReference = document.createElement("td");
@@ -107,6 +111,9 @@ function Affichage() {
       colonneActions.appendChild(boutonSupprimer);
 
       //--- AJOUTER TOUTES LES CELLULES À LA LIGNE
+      imgProduitline.appendChild(imgBalise);
+      ligne.appendChild(imgProduitline);
+      //
       ligne.appendChild(celluleReference);
       ligne.appendChild(celluleCategorie);
       ligne.appendChild(celluleLibelle);
@@ -122,6 +129,7 @@ function Affichage() {
 }
 //
 // ------------------------ PAGE PRODUITS ------------------------------------ //
+//
 let btnAddProduit = document.getElementById("cta-save");
 
 if (btnAddProduit) {
@@ -136,9 +144,7 @@ if (btnAddProduit) {
     let categorieProduits = document.getElementById("selectCategorie").value;
     let libelleProduits = document.getElementById("idLibelle").value;
     let prixProduits = document.getElementById("idPrice").value;
-    let descriptionProduits = document.getElementById("idDescription").value;
-
-    console.log(referenceProduits, categorieProduits, libelleProduits, prixProduits, descriptionProduits);
+    //
 
     //--- TABLEAU POUR OBJETS PRODUITS
     let nouveauProduit = {
@@ -217,6 +223,7 @@ function afficherDetails(produit) {
 
   //---AJOUT DES DETAILS DU PRODUIT
   let details = [
+
     "Référence: " + produit.reference,
     "Catégorie: " + produit.categorie,
     "Libellé: " + produit.libelle,

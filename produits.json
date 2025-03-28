@@ -50,7 +50,8 @@
       "description": "PC de bureau puissant avec processeur Intel Core i7 et carte graphique NVIDIA GeForce RTX 3060.",
       "stock": 25,
       "prix": 1599.99,
-      "categorie": "Ordinateurs de bureau"
+      "categorie": "Ordinateurs de bureau",
+      "photo": "Dell-XPS-8940.jpg"
     },
     {
       "reference": "LAP001",
@@ -95,7 +96,7 @@
       "stock": 50,
       "prix": 249.99,
       "categorie": "Audio",
-      "photo": "aipod.jpg"
+      "photo": "airpod.jpg"
     },
     {
       "reference": "VID002",
@@ -130,7 +131,8 @@
       "description": "Tablette Android avec écran Super AMOLED de 12,4 pouces, S Pen inclus et processeur Qualcomm Snapdragon 865+.",
       "stock": 20,
       "prix": 849.99,
-      "categorie": "Tablettes"
+      "categorie": "Tablettes",
+      "photo": "tablet2.jpg"
     }
   ]
   
